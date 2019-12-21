@@ -1,0 +1,7 @@
+<% @users.each do |user| %>
+  <p>
+    <%= link_to "名前：#{user.name}", "/user/#{user.id}" %>　
+    <%= link_to "更新", "/users/#{user.id}/edit" %>
+    <%= link_to "削除", "/users/#{user.id}", method: :delete %>
+  </p>
+<% end %>
